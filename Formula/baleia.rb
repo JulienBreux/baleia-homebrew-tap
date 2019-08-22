@@ -2,16 +2,16 @@
 class Baleia < Formula
   desc "Baleia is a template engine used to manage Docker images templates repositories."
   homepage "https://julienbreux.github.io/baleia/"
-  version "0.4"
+  version "0.5"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/JulienBreux/baleia/releases/download/v0.4/baleia_0.4_Darwin_x86_64.tar.gz"
-    sha256 "02a3a6b5c66ec89221f8eee2edb142733a7da7cd4d8b4386a789f7f7adc7b744"
+    url "https://github.com/JulienBreux/baleia/releases/download/v0.5/baleia_0.5_Darwin_x86_64.tar.gz"
+    sha256 "42b61ba4cb50afbcb55b43505a2326a5f8dd9c735974966119b2e33a054f77b0"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/JulienBreux/baleia/releases/download/v0.4/baleia_0.4_Linux_x86_64.tar.gz"
-      sha256 "3c154d875babf71e74d574ee950dbb91c6a9a4fb99445a117e40d687fb0defb7"
+      url "https://github.com/JulienBreux/baleia/releases/download/v0.5/baleia_0.5_Linux_x86_64.tar.gz"
+      sha256 "ca73a5d902bf2d6ff46d2df69271f80e1c86a707b9e357f9caf361c08d0f2924"
     end
   end
 
