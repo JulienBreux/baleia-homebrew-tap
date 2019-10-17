@@ -2,16 +2,25 @@
 class Baleia < Formula
   desc "Baleia is a template engine used to manage Docker images templates repositories."
   homepage "https://julienbreux.github.io/baleia/"
-  version "0.8"
+  version "0.9"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/JulienBreux/baleia/releases/download/v0.8/baleia_0.8_Darwin_x86_64.tar.gz"
-    sha256 "977c3861c059937a573f7a8c2514a36fbc3f87f39db768a20d935598e17c872a"
+    url "https://github.com/JulienBreux/baleia/releases/download/v0.9/baleia_0.9_Darwin_x86_64.tar.gz"
+    sha256 "fe921fb5528dad3475e01163322650353c48653e2a05496dbab803494c7c1cac"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/JulienBreux/baleia/releases/download/v0.8/baleia_0.8_Linux_x86_64.tar.gz"
-      sha256 "553562b38b2d9e6d5af849a3dfcf9e2e2c8aba4b464bd6dcc31c85e992a99c1c"
+      url "https://github.com/JulienBreux/baleia/releases/download/v0.9/baleia_0.9_Linux_x86_64.tar.gz"
+      sha256 "e60ab2d0f8718b7f544f61d484c09763ef47727c588c401381669886c946ba93"
+    end
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/JulienBreux/baleia/releases/download/v0.9/baleia_0.9_Linux_arm64.tar.gz"
+        sha256 "12c55237f5efadfeb468146f80a49801b5d33460aa5d8eeb2747163a79a896f6"
+      else
+        url "https://github.com/JulienBreux/baleia/releases/download/v0.9/baleia_0.9_Linux_armv6.tar.gz"
+        sha256 "64e72c942545081f4150083dc088bceea267079a5544826bdf3f5d3aee4ac26f"
+      end
     end
   end
 
